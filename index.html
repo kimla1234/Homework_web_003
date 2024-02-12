@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Grid and Responsive</title>
+  </head>
+  <body>
+    <div>
+      <!--Header & Navbar-->
+      <div class="navbar">
+        <div class="logo">
+          <img src="./assets/logo.png" alt="Logo" />
+          <span>Stadterest</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search stuff here..." />
+        </div>
+        <div class="login">
+          <a href="#">Login</a>
+        </div>
+      </div>
+      <!--Container-->
+      <div class="content">
+      <div class="container">
+        <div class="gride-2">
+          <img src="./assets/image-1.avif" alt="" />
+        </div>
+        <div class="gride-3">
+          <img src="./assets/image-2.avif" alt="" />
+        </div>
+        <div class="gride-2">
+          <img src="./assets/image-3.avif" alt="" />
+        </div>
+        <div class="gride-3">
+          <img src="./assets/image-4.jpeg" alt="" />
+        </div class="v-stretch">
+        <div class="gride-2">
+          <img src="./assets/image-5.avif" alt="" />
+        </div>
+        <div class="gride-2">
+          <img src="./assets/image-6.avif" alt="" />
+        </div>
+        <div class="gride-3">
+          <img src="./assets/image-7.jpeg" alt="" />
+        </div>
+        <div class="gride-3">
+          <img src="./assets/image-8.avif" alt="" />
+        </div>
+        <div class="gride-2">
+          <img src="./assets/image-9.jpeg" alt="" />
+        </div>
+        <div class="gride-2">
+          <img src="./assets/image-10.avif" alt="" />
+        </div>
+      </div>
+      <div class="popup-image">
+        <span><img src="./assets/image-1.avif" alt=""></span>
+      </div>
+    </div>
+    </div>
+    <script>
+      document.querySelectorAll('.container img').forEach(image =>{
+        image.onclick = () => {
+          document.querySelector('.popup-image').style.display = 'block';
+          document.querySelector('.popup-image img').src = image.getAttribute('src')
+        }
+      });
+      document.querySelector('.popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
